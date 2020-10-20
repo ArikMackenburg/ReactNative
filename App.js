@@ -1,15 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { ImageBackground, StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Battery from './components/battery';
 import Brightness from './components/brightness'
 import Map from './components/map'
 import Location from './components/location'
 
+
 export default function App() {
+  const image = 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940';
   return (
 
-    <View style={styles.container}>
+    <ImageBackground source={require('./assets/background.jpeg')} style={styles.container}>
       <SafeAreaView>
         <View>
           <Battery />
@@ -18,7 +20,7 @@ export default function App() {
         </View>
         <StatusBar style="auto" />
       </SafeAreaView>
-    </View>
+    </ImageBackground>
   );
 }
 
@@ -28,7 +30,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'grey',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
-    height: '100%',
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center"
   },
 });
