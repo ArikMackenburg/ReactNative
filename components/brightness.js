@@ -54,10 +54,7 @@ export default function BrightnessDemo() {
       }}>
         <Text>Welcome to the Dance Party!</Text>
       </View>
-      <View 
-      style= {{
-        display: 'inline',
-      }}>
+      <View>
         <Button title="Dance" onPress={()=>danceMode()} />
 
       </View>
