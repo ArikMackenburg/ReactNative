@@ -16,14 +16,14 @@ export default function BrightnessDemo() {
     
   
   
-  function danceMode() {
+  async function danceMode() {
     if (!permission) {
       console.log('Cannot dance mode')
       return;
     }
 
     for(let i = 0; i < 1000; i++) {
-      Brightness.setBrightnessAsync(Math.random());
+      await Brightness.setBrightnessAsync(Math.random());
     }
   }
 
