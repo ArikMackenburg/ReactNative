@@ -25,6 +25,25 @@ export default function BrightnessDemo() {
     for(let i = 0; i < 1000; i++) {
       await Brightness.setBrightnessAsync(Math.random());
     }
+
+    // let i = 0;
+    // let canSet = true;
+    // const id = setInterval(async () => {
+
+    //   if (canSet) {
+    //     canSet = false;
+    //     await Brightness.setBrightnessAsync(Math.random());
+    //     canSet = true;
+    //   }
+    //   else {
+    //     console.log('Skipping because brightness is still being set')
+    //   }
+
+    //   // We've had enough, so stop the interval
+    //   if (i++ > 1000) {
+    //     clearInterval(id);
+    //   }
+    // }, 5)
   }
 
   return (
