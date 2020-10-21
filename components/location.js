@@ -13,6 +13,7 @@ export default function App() {
       let { status } = await Location.requestPermissionsAsync();
       if (status !== 'granted') {
         setErrorMsg('Permission to access location was denied');
+        return
       }
 
       let location = await Location.getCurrentPositionAsync({});
